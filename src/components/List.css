@@ -1,0 +1,15 @@
+.CareerList li {
+    font-weight: 700;
+    margin: 0;
+}
+
+.CareerList p {
+    color: #828282;
+    line-height: 1;
+    margin: 8px 0;
+}
+
+.date {
+    font-size: 13px;
+    font-style: italic;
+}

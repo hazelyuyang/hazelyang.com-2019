@@ -1,0 +1,104 @@
+.about {
+    width: 100%;
+    margin: 132px auto;
+}
+
+.aboutContent {
+    width: 580px;
+    margin: 0 auto;
+    /* transition: .4s cubic-bezier(0.1, 0.8, 0.2, 1);
+    animation: ContentAnimation 2s 0s forwards cubic-bezier(0.1, 0.8, 0.1, 1); */
+}
+
+.aboutContent h2 {
+    margin-bottom: 16px;
+}
+
+.aboutContent h3 {
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.aboutContent h4 {
+    font-weight: 700;
+    margin-top: 24px;
+}
+
+.aboutContent p {
+    line-height: 1.8;
+    margin-top: 4px;
+}
+
+@media (max-width: 640px) {
+    .aboutContent {
+        padding: 0 16px;
+        width: 340px;
+    }
+}
+
+.CareerJourney {
+    margin-top: 24px;
+}
+
+.ListLink {
+    margin-top: 8px;
+}
+
+.ListLink li {
+    color: #4F4F4F;
+    font-weight: 700;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.ProjectSection {
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    justify-items: center;
+    grid-gap: 16px;
+    margin: 24px auto;
+}
+
+.ProjectSection .Card {
+    height: 260px;
+    width: 100%;
+}
+
+.ProjectSection .Card:hover img {
+    transform: translateX(-8px) translateY(-8px);
+}
+
+
+.ProjectSection .Card h2 {
+    font-size: 24px;
+}
+
+.ProjectSection .Card h3 {
+    font-size: 16px;
+}
+
+.ProjectSection .Card h4 {
+    font-size: 14px;
+}
+
+@media (max-width: 640px) {
+    .ProjectSection{
+        grid-template-columns: repeat(1 ,1fr);
+    }
+
+    .ProjectSection .Card {
+        height: 240px;
+        width: 100%;
+    }
+}
+
+/* @keyframes ContentAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+} */

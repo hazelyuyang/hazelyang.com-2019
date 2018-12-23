@@ -1,0 +1,106 @@
+.CardsGroup {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    grid-gap:24px;
+    justify-items: center;
+}
+
+.Card {
+    border-radius: 16px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 268px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 1s cubic-bezier(0.1, 0.8, 0.2, 1);
+    animation: CardAnimation 1s 0s backwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Card:hover {
+    transform: scale(1.05, 1.05);
+    box-shadow: 0 0 30px rgba(0,0,0, 0.3);
+}
+
+.Card img {
+    height: 110%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Card:hover img {
+    transform: translateX(-13px) translateY(-13px);
+}
+
+.Card h2 {
+    color: white;
+    margin: 48px 48px 0 48px;
+}
+
+.Card h3 {
+    color: rgba(225, 225, 225, .6);
+    margin: 8px 48px 0 48px;
+    line-height: 1.3;
+}
+
+.Card a {
+    border-bottom: none;
+}
+
+.CardLabel h4 {
+    background-color: rgba(225, 225, 225, .35);
+    border-radius: 25px;
+    bottom: 48px;
+    color: white;
+    display: inline;
+    font-weight: 700;
+    padding: 6px 18px;
+    position: absolute;
+    margin: 0 0 0 48px;
+    text-transform: uppercase;
+}
+
+
+
+@media (max-width:1024px) {
+    .CardsGroup {
+        margin: 0 16px;
+    }
+    .Card h3 {
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+    .Card img {
+        height: 120%;
+    }
+}
+
+@media (max-width: 640px) {
+    .CardsGroup {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .Card {
+        width: 100%;
+    }
+
+    .Card h3 {
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+}
+
+@keyframes CardAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

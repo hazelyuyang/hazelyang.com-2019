@@ -1,0 +1,97 @@
+.Header {
+    padding: 16px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    animation: HeaderAnimation 2s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: .6s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
+
+.HeaderScrolled {
+    background:white;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    padding: 8px 0;
+}
+
+.Header a {
+    color: #919191;
+    transition: .5s cubic-bezier(0.1, 0.8, 0.1, 1);
+    border-bottom: none;
+}
+
+.Header a:hover {
+    color: #5E2D9D;
+    transform: translateY(-2px);
+}
+
+.HeaderGroup {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-items: center;
+}
+
+.HeaderGroup .InternalLink {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 24px;
+    align-items: center;
+    justify-items: center;
+    max-width: 480px;
+}
+
+.HeaderGroup .Network {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 24px;
+}
+
+.imgExpand {
+    width: 48px;
+    transition: .3s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
+
+.shrink {
+    width: 38px;
+    transition: .3s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
+
+@media (max-width:640px) {
+    .Header {
+        padding: 12px 0;
+    }
+
+    .HeaderGroup {
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 16px;
+    }
+
+    .HeaderGroup .InternalLink {
+        grid-gap: 16px;
+        margin-left: 8px;
+    }
+
+    .HeaderGroup .Network a:nth-child(3), .Network a:nth-child(4) {
+        display: none;
+    }
+
+    .Header a:nth-child(6) {
+        display: none;
+    }
+}
+
+@keyframes HeaderAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

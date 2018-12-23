@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+
+body {
+  font-size: 17px;
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: .1px;
+  line-height: 1.1;
+  margin: 0;
+  -webkit-font-smoothing: antialiased; 
+}
+
+a {
+  color: #5E2D9D;
+  text-decoration: none;
+  border-bottom: 1px dashed #5E2D9D;
+}
+
+a:hover {
+  color: rgba(94, 45, 157, .8);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 42px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 19px;
+  font-weight: 400;
+  margin: 0;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+  color: #4F4F4F;
+}
+
+.Hero {
+  height: 340px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+
+.HeroGroup {
+  margin: 0 auto;
+  padding: 56px 0;
+}
+
+.HeroGroup h1 {
+  line-height: 1.2;
+  margin: 132px 0 16px 0;
+  animation: HeroAnimation;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.HeroGroup h3 {
+  line-height: 1.1;
+  color: #919191;
+  animation: HeroAnimation 2s 0s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.HeroGroup a {
+  margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .Hero {
+    padding: 0 16px;
+  }
+
+}
+
+@keyframes HeroAnimation {
+  0% {
+      opacity: 0;
+      transform: translateY(-40px)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0px)
+  }
+}
+

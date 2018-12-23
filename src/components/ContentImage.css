@@ -1,0 +1,27 @@
+.ContentImage {
+    margin: 32px auto;
+}
+
+.ClipImage {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: 3px;
+}
+
+@media (max-width: 640px) {
+    .ClipImage {
+        width: 320px;
+    }
+}
+
+.ContentImage img {
+    width: 100%;
+}
+
+.ContentImage p {
+    color: #828282;
+    font-style: italic;
+}
